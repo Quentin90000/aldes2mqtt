@@ -9,7 +9,7 @@ WORKDIR /app
 #RUN npm install && npm run build
 
 # Étape de production
-FROM node:lts-alpine AS runner
+FROM node:22-alpine AS runner
 
 WORKDIR /app
 
