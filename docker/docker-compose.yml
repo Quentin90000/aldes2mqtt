@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
     aldes2mqtt:
-        image: node:lts-alpine
+        image: node:22-alpine
         tty: true
         volumes:
             - ../:/app
