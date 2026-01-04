@@ -1,12 +1,12 @@
 {
-  "name": "Mon Aldes 2 MQTT",
+  "name": "Aldes 2 MQTT - Fork Quentin",
   "slug": "aldes2mqtt",
   "description": "Aldes 2 MQTT fork avec sensors",
   "version": "0.2.5",
-  "url": "https://github.com/TON_USER/aldes2mqtt",
-  "maintainer": "TON_USER",
+  "url": "https://github.com/Quentin90000/aldes2mqtt",
+  "maintainer": "Quentin90000",
   "arch": ["aarch64", "armv7", "amd64"],
   "startup": "application",
   "boot": "auto",
-  "image": "docker.io/TON_USER/aldes2mqtt:latest"
+  "image": "docker.io/smeagolworms4/aldes2mqtt:latest"
 }
