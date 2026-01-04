@@ -180,8 +180,8 @@ async function request(path, options = {}) {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
                 body: new URLSearchParams({
-                    'username': 'smeagolworms4@gmail.com',
-                    'password': 'O2range!',
+                    'username': `${aldesLogin}`,
+                    'password': `${aldesPassword}`,
                     'grant_type': 'password'
                 })
             })
@@ -242,14 +242,14 @@ function sendCommand(id, method, value) {
 }
 const devices = {};
 const modeMapping = {
-    A: 'auto',
+    X: 'guest',
     Z: 'programming',
     V: 'daily',
     W: 'vacation',
     Y: 'boost',
 };
 const modeRMapping = {
-    auto: 'A',
+    guest: 'X',
     programming: 'Z',
     daily: 'V',
     vacation: 'W',
@@ -537,7 +537,7 @@ async function analyseProduct(product) {
                     state_topic: `${mqttPrefix}/${details.serial_number}/week_planning`,
                     value_template: `{{ value_json.${d}.h${h} }}`,
                     command_topic: `${mqttPrefix}/${details.serial_number}/set_week_planning_${d}_${h}`,
-                    options: ['daily', 'vacation', 'boost'],
+                    options: ['daily', 'vacation', 'boost', 'guest'],
                     device: device.mqqtDevice,
                 }));
             }
